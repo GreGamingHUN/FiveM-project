@@ -1,0 +1,16 @@
+* {
+   /* background-color: black;  */
+   border-color: red;
+   border-width: 2px;
+}
+
+button {
+    padding: 15px;
+    box-shadow: 3px 3px 10px;
+}
+.center {
+    position: grid;
+    place-items: center;
+    text-align: center;
+    margin: auto;
+}
