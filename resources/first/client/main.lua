@@ -57,6 +57,8 @@ RegisterCommand('auto', function(source, args)
 
     SetModelAsNoLongerNeeded(vehicleName)
 
+    TriggerServerEvent('addVehicle', playerPed, vehicleName, pos.x, pos.y, pos.z)
+
     TriggerEvent('chat:addMessage', {
         args = {'ugyes vagy, ' ..vehicleName.. 'spawnolása'}
     })

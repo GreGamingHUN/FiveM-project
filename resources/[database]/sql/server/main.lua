@@ -7,3 +7,18 @@ RegisterCommand('send', function(source, args)
             TriggerClientEvent('display', source, "^3" ..argString.. "^0")
     end)
 end)
+
+function addVehicle(source, carname, x, y, z)
+    MySQL.Async.execute('INSERT INTO vehicles (carname, x, y, z) VALUES (@car, @x, @y ,@z)',
+    {['@car'] = carname, ['@x'] = x, ['@y'] = y, ['@z'] = z}, 
+    function(result)
+        TriggerClientEvent('chatMessage', source)
+    end)
+end
+exports('addVehicle', addVehicle)
+
+function customSql(query)
+    MySQL.Async.fetchAll(query, {}, function(result)
+    end)
+end
+exports('customSql', customSql)
