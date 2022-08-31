@@ -151,13 +151,12 @@ RegisterCommand('delblip', function(source, args)
     RemoveBlip(blip)
 end, false)
 
-Citizen.CreateThread(function()
-    while ture do
-        Citizen.Wait(0)
-        if IsControlPressed(0, 51) then
-            TriggerEvent('chat:addMessage', {
-                args = {'Faszxdddddd'}
-            })
-        end
-    end
+RegisterCommand('tp', function(source, args)
+    SetEntityCoords(PlayerPedId(), args[1], args[2], args[3])
+end)
+
+RegisterCommand('del', function(source, args)
+    local vehicle = GetVehiclePedIsIn(PlayerPedId(), false)
+    SetEntityAsMissionEntity(vehicle, true, true)
+    DeleteVehicle(vehicle)
 end)

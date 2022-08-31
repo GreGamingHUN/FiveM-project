@@ -9,7 +9,8 @@ RegisterCommand('send', function(source, args)
 end)
 
 function addVehicle(source, carname, x, y, z)
-    MySQL.Async.execute('INSERT INTO vehicles (carname, x, y, z) VALUES (@car, @x, @y ,@z)',
+    print(x.. ' ' ..y.. ' ' ..z)
+    MySQL.Async.execute('INSERT INTO vehicles (carname, x, y, z) VALUES (@car, @x, @y, @z)',
     {['@car'] = carname, ['@x'] = x, ['@y'] = y, ['@z'] = z}, 
     function(result)
         TriggerClientEvent('chatMessage', source)
