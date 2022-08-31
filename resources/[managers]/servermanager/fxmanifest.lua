@@ -1,13 +1,12 @@
 fx_version 'cerulean'
 game 'gta5'
 
-name "accountmanager"
-description "Felhasználók kezelésére szolgáló resource"
+name "servermanager"
+description "A szerver fő manager resource-a"
 author "GreG"
 version "0.0.1"
 
 shared_scripts {
-	'@mysql-async/lib/MySQL.lua',
 	'shared/*.lua'
 }
 
