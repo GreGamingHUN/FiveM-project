@@ -68,7 +68,7 @@ exports('StartUp', StartUp)
 AddEventHandler('onResourceStop', function(resource)
     if (resource == 'vehiclemanager') then
         print('ez az a resource')
-        for id, object in pairs(exports.vehiclemanager:GetVehicles()) do
+        for id, object in pairs(GetVehicles()) do
             local vehiclePos = GetEntityCoords(object[2])
             local vehicleRot = GetEntityRotation(object[2])
             DeleteEntity(object[2])

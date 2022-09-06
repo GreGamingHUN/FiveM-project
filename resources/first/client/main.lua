@@ -160,3 +160,12 @@ RegisterCommand('del', function(source, args)
     SetEntityAsMissionEntity(vehicle, true, true)
     DeleteVehicle(vehicle)
 end)
+
+local phone
+RegisterCommand('makephone', function(source, args)
+    if (not phone== nil) then
+        phone = nil
+    end
+    phone = CreateMobilePhone(args[1])
+    phone.SetMobilePhonePosition(0.1, 0.1, 0.1)
+end)
