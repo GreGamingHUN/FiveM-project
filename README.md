@@ -1,3 +1,1 @@
-Egy Saját FiveM projekten dolgozom, hogy gyakoroljam a lua programozást
-
-Jelenleg kb semmi hasznos nem található benne
+I'm working on my own FiveM project, so I can get more knowledge of Lua
